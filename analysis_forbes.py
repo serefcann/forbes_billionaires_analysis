@@ -45,6 +45,7 @@ industry_worth.plot.pie(ax=axs[1])
 axs[1].set_title('industries')
 axs[1].set_xlabel('')
 axs[1].set_ylabel('')
+plt.savefig('net_worth_pie.png')
 plt.show()
 
 
@@ -54,7 +55,10 @@ Common_Age = df['Age'].value_counts().idxmax()
 fig, axs = plt.subplots(ncols=2,figsize=(8,12))
 df.plot(x='Age',y='Net_Worth',kind='scatter',ax=axs[0])
 df['Age'].plot.kde(ax=axs[1]) # normal distribution
+axs[1].set_title('Distribution of Billionaires Age')
+axs[0].set_title('Age vs Net Worth')
 print(f'the most common age for billionaires: {Common_Age}') # 61
+plt.savefig('Age_vs_Net_Worth.png')
 plt.show()
 
 
@@ -65,11 +69,13 @@ colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e3
 ax = top10_nw_c.plot.bar(color=colors)
 
 for index,value in enumerate(top10_nw_c):
-    ax.text(index,value,f'{value:,.0f}',ha = 'center',va = 'bottom')
+    ax.text(index,value,f'{value:,.0f}'[:-4]+'B',ha = 'center',va = 'bottom')
 plt.xticks(rotation = 45)
+plt.title('Number of Billionaires for Each Country')
 plt.xlabel('Country')
 plt.ylabel('Net Worth (in USD) M')
 print('Total Net Worth for Top 10 Countries','\n',top10_nw_c)
+plt.savefig('Top 10 Countries.png')
 plt.show()
 
 
@@ -80,6 +86,7 @@ gender_dist.plot.pie(autopct='%.1f%%',colors=['royalblue','red'],explode=explode
 plt.title('Gender Distribution of Billionaires')
 plt.xlabel=''
 plt.ylabel=''
+plt.savefig('Gender Distribution of Billionaires.png')
 plt.show()
 
 
