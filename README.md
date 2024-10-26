@@ -6,7 +6,7 @@ This project involves pulling data from the Forbes Billionaires database, saving
 ## Data Analysis Visualizations
 
 ### Net Worth Distribution
-![Net Worth Distribution](C:\Users\şerefcanmemiş\Documents\Projects\Age_vs_Net_Worth.png)
+![Net Worth Distribution](file:///C:/Users/şerefcanmemiş/Documents/Projects/Age_vs_Net_Worth.png)
 
 ### Net Worth by Industry
 ![Net Worth by Industry](Age_vs_Net_Worth.png)
