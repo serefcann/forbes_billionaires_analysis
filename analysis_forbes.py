@@ -18,7 +18,7 @@ from sklearn.model_selection import cross_val_score
 conn = mysql.connector.connect(user = 'root', password = 'PASSW',
                                   host = 'localhost',database='forbes_db')
 cursor = conn.cursor()
-engine =create_engine('mysql+mysqldb://root:PASSW.@localhost/forbes_db')
+engine =create_engine('mysql+mysqldb://root:PASSW@localhost/forbes_db')
 df = pd.read_sql("Select * from forbes_table",con=engine)
 cursor.close()
 conn.close
@@ -37,40 +37,60 @@ freq.max()
 freq.idxmax()
 
 # analyzing Net Worth for each industry and frequence
-industry_worth=df.groupby(['industry'])['Net_Worth'].sum()
+plt.figure(figsize=(6,4))
+industry_worth=df.groupby(['industry'])['Net_Worth'].sum().sort_values()
+colors = [
+    "#FFF1E5", "#F3F9E5", "#E4F1E4", "#C2E6C4", "#A2C4A2", "#6B8E3A",
+    "#4A8BCA", "#7FA9D5", "#A0C4D2", "#B5D3D1", "#A8B6B1", "#8E8E8E", 
+    "#6D6D6D", "#5C5C5C", "#4B4B4B", "#2E2E2E", "#1C1C1C", "#0A0A0A"
+]
 
-fig, axs = plt.subplots(ncols=2,figsize = (8,12))
-sns.histplot(df['Net_Worth'], bins=30, kde=True,ax=axs[0])
-industry_worth.plot.pie(ax=axs[1])
-axs[1].set_title('industries')
-axs[1].set_xlabel('')
-axs[1].set_ylabel('')
-plt.savefig('net_worth_pie.png')
+industry_worth.plot.barh(color=colors)
+plt.title('')
+plt.xlabel('')
+plt.ylabel('')
+plt.tight_layout()
+plt.savefig('net_worth_barh.png')
 plt.show()
 
 
 # Is age correlated with Net Worth ?
+plt.figure(figsize=(10, 5))  # Adjust size for better layout
+age_vs_net_worth=df.groupby('Age')['Net_Worth'].sum().replace('N/A',np.nan).dropna()
+age_vs_net_worth.plot.bar(color='skyblue', edgecolor='black')
+plt.title('Age vs Net Worth')
+plt.xticks(rotation=90)
+plt.tight_layout()
+plt.show()
+plt.savefig('Age_vs_Net_Worth.png')
+
+# Distribution of Billionaires Age
+df['Age'] = pd.to_numeric(df['Age'], errors='coerce')
 Common_Age = df['Age'].value_counts().idxmax()
 
-fig, axs = plt.subplots(ncols=2,figsize=(8,12))
-df.plot(x='Age',y='Net_Worth',kind='scatter',ax=axs[0])
-df['Age'].plot.kde(ax=axs[1]) # normal distribution
-axs[1].set_title('Distribution of Billionaires Age')
-axs[0].set_title('Age vs Net Worth')
-print(f'the most common age for billionaires: {Common_Age}') # 61
-plt.savefig('Age_vs_Net_Worth.png')
+plt.figure(figsize=(6, 4)) 
+df['Age'].plot.kde(color='blue', linewidth=2)
+plt.title('Distribution of Billionaires Age', fontsize=16)
+plt.xlabel('Age', fontsize=12)
+plt.ylabel('Density', fontsize=12)
+plt.axvline(Common_Age, color='red', linestyle='--', linewidth=1.5, label=f'Most Common Age: {Common_Age}')
+plt.legend()
+plt.tight_layout()
+plt.savefig('Distribution_of_Billionaires Age.png')
 plt.show()
 
 
 # Number of billionaires for each Country
+plt.figure(figsize=(6,6))
 grouped_df = df.groupby(['Country'])['Net_Worth'].sum()
 top10_nw_c = grouped_df.sort_values(ascending=False).head(10)
-colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
+colors = ['#FF6F61', '#6B5B95', '#88B04B', '#F7CAC9', '#92A8D1', 
+          '#955251', '#B565A7', '#009B77', '#DD4124', '#45B8AC']
 ax = top10_nw_c.plot.bar(color=colors)
 
 for index,value in enumerate(top10_nw_c):
     ax.text(index,value,f'{value:,.0f}'[:-4]+'B',ha = 'center',va = 'bottom')
-plt.xticks(rotation = 45)
+plt.xticks(rotation = 30)
 plt.title('Number of Billionaires for Each Country')
 plt.xlabel('Country')
 plt.ylabel('Net Worth (in USD) M')
@@ -80,13 +100,14 @@ plt.show()
 
 
 # Gender Distribution of Billionaires
+plt.figure(figsize=(6,4))
 gender_dist = df['gender'].value_counts()
 explode = [0,0.2]
 gender_dist.plot.pie(autopct='%.1f%%',colors=['royalblue','red'],explode=explode,shadow=True)
 plt.title('Gender Distribution of Billionaires')
 plt.xlabel=''
 plt.ylabel=''
-plt.savefig('Gender Distribution of Billionaires.png')
+plt.savefig('Gender_Distribution_of_Billionaires.png')
 plt.show()
 
 
