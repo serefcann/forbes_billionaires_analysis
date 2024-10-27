@@ -15,7 +15,7 @@ This project involves pulling data from the Forbes Billionaires database, saving
 ![Top 10 Countries](https://github.com/user-attachments/assets/55c2e09e-9351-40d3-85c6-ea60b0f64c69)
 
 ### Gender Distribution of Billionaires
-![Gender Distribution of Billionaires](https://github.com/user-attachments/assets/3aa82abd-39f9-44de-8893-48c67a913175)
+![Gender_Distribution_of_Billionaires](https://github.com/user-attachments/assets/ac4c2a54-bfe5-4460-afdf-7f59feae1525)
 
 ## Age Distibution of Billionaires
 ![Distribution_of_Billionaires Age](https://github.com/user-attachments/assets/9f1e3b42-f81e-4f73-9606-6235febd8f5d)
