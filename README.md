@@ -20,14 +20,10 @@ This project involves pulling data from the Forbes Billionaires database, saving
 ![Gender Distribution of Billionaires](https://github.com/user-attachments/assets/3aa82abd-39f9-44de-8893-48c67a913175)
 
 ## Age Distibution of Billionaires
-![Distribution_of_Billionaires Age](https://github.com/user-attachments/assets/82b76bcf-4112-4ca9-a5d4-1e3afdac2bce)
-
 ![Distribution_of_Billionaires Age](https://github.com/user-attachments/assets/9f1e3b42-f81e-4f73-9606-6235febd8f5d)
 
 
 
 ## Conclusion
 The analysis provides valuable insights into the distribution of wealth among billionaires, including factors such as age, industry, and gender.
-
-![Distribution_of_Billionaires Age](https://github.com/user-attachments/assets/bb385af1-a36a-4bf9-bb58-53e1b2ac924b)
 
