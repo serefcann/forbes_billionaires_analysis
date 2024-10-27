@@ -18,7 +18,7 @@ This project involves pulling data from the Forbes Billionaires database, saving
 ![Distribution_of_Billionaires Age](https://github.com/user-attachments/assets/9f1e3b42-f81e-4f73-9606-6235febd8f5d)
 
 ### Net Worth by Industry
-![net_worth_pie](https://github.com/user-attachments/assets/fb3bc7e5-9c8a-4ab9-a86a-464302d7fe21)
+![net_worth_barh](https://github.com/user-attachments/assets/2bccaf59-7222-4a4e-a0e7-f3c29f1bf552)
 
 
 
