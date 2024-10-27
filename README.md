@@ -13,8 +13,6 @@ This project involves pulling data from the Forbes Billionaires database, saving
 
 ### Top 10 Countries by Total Net Worth
 ![Top 10 Countries](https://github.com/user-attachments/assets/55c2e09e-9351-40d3-85c6-ea60b0f64c69)
-![Top 10 Countries](https://github.com/user-attachments/assets/f106fe4b-0919-42c8-9c00-5a2f2bfad62b)
-
 
 ### Gender Distribution of Billionaires
 ![Gender Distribution of Billionaires](https://github.com/user-attachments/assets/3aa82abd-39f9-44de-8893-48c67a913175)
