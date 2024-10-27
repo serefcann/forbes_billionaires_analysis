@@ -12,7 +12,7 @@ This project involves pulling data from the Forbes Billionaires database, saving
 ![Age_vs_Net_Worth](https://github.com/user-attachments/assets/6398d9fc-ac76-49f2-a13f-0f89ffed4eb4)
 
 ### Top 10 Countries by Total Net Worth
-![Top 10 Countries](https://github.com/user-attachments/assets/55c2e09e-9351-40d3-85c6-ea60b0f64c69)
+![Top 10 Countries](https://github.com/user-attachments/assets/9e271fab-5401-4233-b418-27d4939c498a)
 
 ### Gender Distribution of Billionaires
 ![Gender_Distribution_of_Billionaires](https://github.com/user-attachments/assets/ac4c2a54-bfe5-4460-afdf-7f59feae1525)
