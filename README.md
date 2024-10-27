@@ -24,5 +24,5 @@ This project involves pulling data from the Forbes Billionaires database, saving
 ## Conclusion
 The analysis provides valuable insights into the distribution of wealth among billionaires, including factors such as age, industry, and gender.
 
+![Distribution_of_Billionaires Age](https://github.com/user-attachments/assets/bb385af1-a36a-4bf9-bb58-53e1b2ac924b)
 
-![net_worth_pie](https://github.com/user-attachments/assets/fb3bc7e5-9c8a-4ab9-a86a-464302d7fe21)
