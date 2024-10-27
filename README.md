@@ -6,21 +6,23 @@ This project involves pulling data from the Forbes Billionaires database, saving
 ## Data Analysis Visualizations
 
 ### Net Worth by Industry
-![net_worth_pie](https://github.com/user-attachments/assets/15176ee2-2faf-4188-a24d-991094d2d806)
+![net_worth_pie](https://github.com/user-attachments/assets/fb3bc7e5-9c8a-4ab9-a86a-464302d7fe21)
 
 ### Correlation between Age and Net Worth
-![Age_vs_Net_Worth](https://github.com/user-attachments/assets/0cc2a409-49dd-4a6b-bd93-0a681ce7ba53)
+![Age_vs_Net_Worth](https://github.com/user-attachments/assets/6398d9fc-ac76-49f2-a13f-0f89ffed4eb4)
 
 ### Top 10 Countries by Total Net Worth
-![Top 10 Countries](https://github.com/user-attachments/assets/3301a77e-9365-45c3-b150-5b6da7064f8e)
+![Top 10 Countries](https://github.com/user-attachments/assets/55c2e09e-9351-40d3-85c6-ea60b0f64c69)
 
 ### Gender Distribution of Billionaires
-![Gender Distribution of Billionaires](https://github.com/user-attachments/assets/87ac5e52-249d-4553-af0d-bd0e9ff29ad6)
+![Gender Distribution of Billionaires](https://github.com/user-attachments/assets/3aa82abd-39f9-44de-8893-48c67a913175)
 
+## Age Distibution of Billionaires
+![Distribution_of_Billionaires Age](https://github.com/user-attachments/assets/82b76bcf-4112-4ca9-a5d4-1e3afdac2bce)
 
 
 ## Conclusion
 The analysis provides valuable insights into the distribution of wealth among billionaires, including factors such as age, industry, and gender.
 
 
-![Age_vs_Net_Worth](https://github.com/user-attachments/assets/9d539267-f8af-4be9-9737-50dc282b6033)
+![net_worth_pie](https://github.com/user-attachments/assets/fb3bc7e5-9c8a-4ab9-a86a-464302d7fe21)
